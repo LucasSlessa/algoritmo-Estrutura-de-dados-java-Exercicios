@@ -157,6 +157,12 @@ class ListaLigada {
     }
 
 
+    //verificar se a lista esta vazia 
+    public boolean isEmpty() {
+        return this.primeira == null;
+    }
+
+
     @Override
     public String toString() {
         if (total == 0) {
