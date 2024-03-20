@@ -1,26 +1,43 @@
+import java.util.Scanner;
 
 public class Programaex6 {
-    
     public static void main(String[] args) {
-        ListaLigada lista1 = new ListaLigada();
-        ListaLigada lista2 = new ListaLigada();
-    
-       
-        lista1.adiciona(1);
-        lista1.adiciona(2);
-        lista1.adiciona(3);
-        System.out.println(lista1);
-    
-        lista2.adiciona(4);
-        lista2.adiciona(5);
-        lista2.adiciona(6);
-        System.out.println(lista2);
-    
+        ListaLigada lista = new ListaLigada();
+
+        Scanner scanner = new Scanner(System.in);
+        int usuario;
+        while (true) {
+            System.out.print("Digite a entrada(-1 para sair):");
+            usuario = scanner.nextInt();
+            if (usuario == -1) {
+                break;
+            } else {
+                lista.adiciona(usuario);
+            }
+        }
+        ListaLigada copia = lista.copia();
+
+        System.out.println(
+                "--------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("Lista Completa: " + lista);
+        System.out.println(
+            "--------------------------------------------------------------------------------------------------------------------------------");
+
+
         
-        lista1.concatena(lista2);
-    
+        lista.removeNaoPrimos();
+
+        scanner.close();
+
+        // Mostra o conteúdo da lista
+        System.out.println(
+                "--------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("Lista sem os nao primos: " + lista);
+        System.out.println(
+                "--------------------------------------------------------------------------------------------------------------------------------");
+
         
-        System.out.println("Concatenated list:");
-        System.out.println(lista1);
+        System.out.println("Lista Copiada: " + copia);
+
     }
 }

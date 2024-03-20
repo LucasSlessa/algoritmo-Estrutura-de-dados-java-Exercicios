@@ -124,7 +124,7 @@ class ListaLigada {
         return copia;
     }
 
-
+    //concatena listas
 
     public ListaLigada concatena(ListaLigada lista) {
         if (this.ultima != null) {
@@ -139,6 +139,21 @@ class ListaLigada {
         lista.ultima = null;
         lista.total = 0;
         return this;
+    }
+
+    //buscasequncia de elementos
+
+    public int buscaSequencial(Object elemento) {
+        Celula atual = this.primeira;
+        int posicao = 0;
+        while (atual != null) {
+            if (atual.getElemento().equals(elemento)) {
+                return posicao;
+            }
+            atual = atual.getProxima();
+            posicao++;
+        }
+        return -1;
     }
 
 

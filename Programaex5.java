@@ -15,7 +15,7 @@ public class Programaex5 {
                 lista.adiciona(usuario);
             }
         }
-        ListaLigada copia = lista.copia();
+        
 
         System.out.println(
                 "--------------------------------------------------------------------------------------------------------------------------------");
@@ -36,8 +36,7 @@ public class Programaex5 {
         System.out.println(
                 "--------------------------------------------------------------------------------------------------------------------------------");
 
-        
-        System.out.println("Lista Copiada: " + copia);
+       
 
     }
 }
