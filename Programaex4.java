@@ -24,7 +24,7 @@ public class Programaex4 {
             "--------------------------------------------------------------------------------------------------------------------------------");
 
 
-        // Remove non-prime elements from the list
+        
         lista.removeNaoPrimos();
 
         scanner.close();

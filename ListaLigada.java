@@ -126,7 +126,20 @@ class ListaLigada {
 
 
 
-
+    public ListaLigada concatena(ListaLigada lista) {
+        if (this.ultima != null) {
+            this.ultima.setProxima(lista.primeira);
+            this.ultima = lista.ultima;
+        } else {
+            this.primeira = lista.primeira;
+            this.ultima = lista.ultima;
+        }
+        this.total += lista.total;
+        lista.primeira = null;
+        lista.ultima = null;
+        lista.total = 0;
+        return this;
+    }
 
 
     @Override
